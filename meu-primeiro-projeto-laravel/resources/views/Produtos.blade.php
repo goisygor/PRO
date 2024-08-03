@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
+    <link rel="stylesheet" href="public\imgs">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -94,7 +95,7 @@
     </nav>
 
     <div class="container">
-        <!-- Produto 1 -->
+      
         <div class="product-card">
             <div class="product-image">
                 <img src="imagens/1.jpg" alt="Produto 1">
@@ -105,7 +106,7 @@
                 <p class="product-price">R$ 99,99</p>
             </div>
         </div>
-        <!-- Produto 2 -->
+       
         <div class="product-card">
             <div class="product-image">
                 <img src="imagens/2.png" alt="Produto 2">
@@ -117,7 +118,7 @@
             </div>
         </div>
 
-        <!-- Produto 3 -->
+        
         <div class="product-card">
             <div class="product-image">
                 <img src="imagens/3.png" alt="Produto 3">
@@ -128,8 +129,7 @@
                 <p class="product-price">R$ 79,99</p>
             </div>
         </div>
-        
-        <!-- Adicione mais produtos conforme necessário -->
+       
     </div>
 
     <footer>
@@ -137,3 +137,33 @@
     </footer>
 </body>
 </html>
+  -->
+<div class="container">
+        <h1>Produtos</h1>
+        <a href="" class="btn btn-primary">Adicionar Produto</a>
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($produtos as $produto)
+                    <tr>
+                        <td>{{ $produto->id }}</td>
+                        <td>{{ $produto->nome }}</td>
+                        <td>{{ $produto->descricao }}</td>
+                        <td>{{ $produto->preco }}</td>
+                        <td>{{ $produto->quantidade }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+
+
