@@ -1,0 +1,1 @@
+INSERT INTO Produtos values (1,'produto1', 'teste', 43.89, 8);
