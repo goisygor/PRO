@@ -1,9 +1,12 @@
+
+
+
 @extends('layouts.app')
 
 
 @section('content')
     <div class="container">
-        <h1 class="my-4">Editar Produto</h1>
+        <h1 class="my-4">Adicionar Livro</h1>
 
 
         @if ($errors->any())
@@ -18,38 +21,37 @@
         @endif
 
 
-        <form action="{{ route('produtos.update', $produto->id) }}" method="POST">
+        <form action="{{ route('produtos.store') }}" method="POST">
             @csrf
-            @method('PUT')
 
 
             <div class="form-group">
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" class="form-control" value="{{ $produto->nome }}">
+                <input type="text" name="nome" class="form-control" placeholder="Nome">
             </div>
 
 
             <div class="form-group">
                 <label for="descricao">Descrição:</label>
-                <textarea name="descricao" class="form-control">{{ $produto->descricao }}</textarea>
+                <textarea name="descricao" class="form-control" placeholder="Descrição"></textarea>
             </div>
 
 
             <div class="form-group">
                 <label for="categoria">Categoria:</label>
-                <input type="text" name="categoria" class="form-control" value="{{ $produto->categoria }}">
+                <input type="text" name="categoria" class="form-control" placeholder="Categoria">
             </div>
 
 
             <div class="form-group">
                 <label for="quantidade">Quantidade:</label>
-                <input type="number" name="quantidade" class="form-control" value="{{ $produto->quantidade }}">
+                <input type="number" name="quantidade" class="form-control" placeholder="Quantidade">
             </div>
 
 
             <div class="form-group">
                 <label for="preco">Preço:</label>
-                <input type="text" name="preco" class="form-control" value="{{ $produto->preco }}">
+                <input type="text" name="preco" class="form-control" placeholder="Preço">
             </div>
 
 

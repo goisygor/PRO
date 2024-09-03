@@ -5,7 +5,7 @@
 
 
 <div class="container">
-    <h1 class="my-4">Produtos</h1>
+    <h1 class="my-4">Livros</h1>
 
 
     @if ($message = Session::get('success'))
@@ -15,7 +15,7 @@
     @endif
 
 
-    <a class="btn btn-success mb-2" href="{{ route('produtos.create') }}"> Criar Novo Produto</a>
+    <a class="btn btn-success mb-2" href="{{ route('produtos.create') }}"> Criar Novo Livro</a>
 
 
     <table class="table table-bordered">
